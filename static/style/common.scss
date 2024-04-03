@@ -1,0 +1,534 @@
+/**
+ * @Author      : zouwq
+ * @Date        : 2022-10-09
+ * @Description : 公共样式
+*/
+
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+
+button::after {
+	border: none;
+}
+
+$direction: top, right, bottom, left;
+
+/* 基本样式 start */
+
+.z-width-full {
+  width: 100%;
+}
+
+.z-height-full {
+  height: 100%;
+}
+
+.z-round {
+	border-radius: 5000rpx !important;
+}
+
+.z-radius {
+	border-radius: 12rpx;
+}
+
+.z-bg-white {
+	background: #FFFFFF;
+}
+
+.z-shadow {
+  box-shadow: 0 0 8rpx 2rpx rgba(0,0,0,0.1);
+}
+
+.z-relative{
+	position: relative;
+}
+
+/* 基本样式 end */
+
+/* flex start */
+
+.z-flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.z-flex-center-between {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* flex伸缩基准值 */
+.z-flex-basic-xs {
+  flex-basis: 20%;
+}
+
+.z-flex-basic-sm {
+  flex-basis: 40%;
+}
+
+.z-flex-basic-md {
+  flex-basis: 50%;
+}
+
+.z-flex-basic-lg {
+  flex-basis: 60%;
+}
+
+.z-flex-basic-xl {
+  flex-basis: 80%;
+}
+
+.z-flex-basic-full {
+  flex-basis: 100%;
+}
+
+/* flex布局的方向 */
+.z-flex-direction-column {
+  flex-direction: column;
+}
+
+.z-flex-direction-row {
+  flex-direction: row;
+}
+
+.z-flex-direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.z-flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* flex容器设置换行 */
+.z-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.z-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* flex容器自身垂直方向对齐方式 */
+.z-flex-center {
+  align-self: center;
+}
+
+.z-flex-top {
+  align-self: flex-start;
+}
+
+.z-flex-end {
+  align-self: flex-end;
+}
+
+.z-flex-stretch {
+  align-self: stretch;
+}
+
+/* flex子元素垂直方向对齐方式 */
+.z-flex-col-center {
+  align-items: center;
+}
+
+.z-flex-col-top {
+  align-items: flex-start;
+}
+
+.z-flex-col-bottom {
+  align-items: flex-end;
+}
+
+/* flex子元素水平方向对齐方式 */
+.z-flex-row-center {
+  justify-content: center;
+}
+
+.z-flex-row-left {
+  justify-content: flex-start;
+}
+
+.z-flex-row-right {
+  justify-content: flex-end;
+}
+
+.z-flex-row-between {
+  justify-content: space-between;
+}
+
+.z-flex-row-around {
+  justify-content: space-around;
+}
+
+/* flex子元素空间分配 */
+@for $i from 0 to 12 {
+  .z-flex-#{$i} {
+    flex: $i;
+  }
+}
+
+.z-col-12 {
+  width: 100%;
+}
+
+.z-col-11 {
+  width: 91.66666667%;
+}
+
+.z-col-10 {
+  width: 83.33333333%;
+}
+
+.z-col-9 {
+  width: 75%;
+}
+
+.z-col-8 {
+  width: 66.66666667%;
+}
+
+.z-col-7 {
+  width: 58.33333333%;
+}
+
+.z-col-6 {
+  width: 50%;
+}
+
+.z-col-5 {
+  width: 41.66666667%;
+}
+
+.z-col-4 {
+  width: 33.33333333%;
+}
+
+.z-col-3 {
+  width: 25%;
+}
+
+.z-col-2 {
+  width: 16.66666667%;
+}
+
+.z-col-1 {
+  width: 8.33333333%;
+}
+
+/* flex end */
+
+/* 内边距 start */
+
+@for $i from 0 to length($direction) + 1 {
+  @if $i == 0 {
+    .z-no-margin {
+      margin: 0;
+    }
+    .z-margin-xs {
+    	margin: 10rpx;
+    }
+    .z-margin-sm {
+    	margin: 20rpx;
+    }
+    .z-margin {
+    	margin: 30rpx;
+    }
+    .z-margin-lg {
+    	margin: 40rpx;
+    }
+    .z-margin-xl {
+    	margin: 50rpx;
+    }
+  } @else {
+    .z-no-margin-#{nth($direction, $i)} {
+      margin-#{nth($direction, $i)}: 0;
+    }
+    .z-margin-#{nth($direction, $i)}-xs {
+    	margin-#{nth($direction, $i)}: 10rpx;
+    }
+    .z-margin-#{nth($direction, $i)}-sm {
+    	margin-#{nth($direction, $i)}: 20rpx;
+    }
+    .z-margin-#{nth($direction, $i)} {
+    	margin-#{nth($direction, $i)}: 30rpx;
+    }
+    .z-margin-#{nth($direction, $i)}-lg {
+    	margin-#{nth($direction, $i)}: 40rpx;
+    }
+    .z-margin-#{nth($direction, $i)}-xl {
+    	margin-#{nth($direction, $i)}: 50rpx;
+    }
+  }
+}
+
+/* 内边距 end */
+
+/* 外边距 start */
+
+@for $i from 0 to length($direction) + 1 {
+  @if $i == 0 {
+    .z-no-padding {
+      padding: 0;
+    }
+    .z-padding-xs {
+    	padding: 10rpx;
+    }
+    .z-padding-sm {
+    	padding: 20rpx;
+    }
+    .z-padding {
+    	padding: 30rpx;
+    }
+    .z-padding-lg {
+    	padding: 40rpx;
+    }
+    .z-padding-xl {
+    	padding: 50rpx;
+    }
+  } @else {
+    .z-no-padding-#{nth($direction, $i)} {
+      padding-#{nth($direction, $i)}: 0;
+    }
+    .z-padding-#{nth($direction, $i)}-xs {
+    	padding-#{nth($direction, $i)}: 10rpx;
+    }
+    .z-padding-#{nth($direction, $i)}-sm {
+    	padding-#{nth($direction, $i)}: 20rpx;
+    }
+    .z-padding-#{nth($direction, $i)} {
+    	padding-#{nth($direction, $i)}: 30rpx;
+    }
+    .z-padding-#{nth($direction, $i)}-lg {
+    	padding-#{nth($direction, $i)}: 40rpx;
+    }
+    .z-padding-#{nth($direction, $i)}-xl {
+    	padding-#{nth($direction, $i)}: 50rpx;
+    }
+  }
+}
+
+/* 外边距 end */
+
+/* float start */
+
+.z-float-left {
+  float: left;
+}
+
+.z-float-right {
+  float: right;
+}
+
+.z-clear-float {
+  clear: both;
+}
+
+.z-clear-float::after,
+.z-clear-float::before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* float end */
+
+/* 边框 start */
+
+@for $i from 0 to length($direction) + 1 {
+  @if $i == 0 {
+    .z-border-solid {
+      border-width: 1rpx !important;
+      border-stze: solid;
+      border-color: $z-middle-color5;
+      
+      &.z-bold-border {
+        border-width: 6rpx !important;
+      }
+    }
+    .z-border-solids {
+      border-width: 1rpx !important;
+      border-stze: solid;
+      border-color: $z-middle-color5;
+      
+      &.z-bold-border {
+        border-width: 6rpx !important;
+      }
+    }
+    .z-border-dashed {
+      border-width: 1rpx !important;
+      border-stze: dashed;
+      border-color: $z-middle-color5;
+      
+      &.z-bold-border {
+        border-width: 6rpx !important;
+      }
+    }
+  } @else {
+    .z-border-solid-#{nth($direction, $i)} {
+      border: 0rpx;
+      border-#{nth($direction, $i)}-width: 1rpx !important;
+      border-stze: solid;
+      border-color: $z-middle-color5;
+      
+      &.z-bold-border {
+        border-#{nth($direction, $i)}-width: 6rpx !important;
+      }
+    }
+    .z-border-solids-#{nth($direction, $i)} {
+      border: 0rpx;
+      border-#{nth($direction, $i)}-width: 1rpx !important;
+      border-stze: solid;
+      border-color: $z-middle-color5;
+      
+      &.z-bold-border {
+        border-#{nth($direction, $i)}-width: 6rpx !important;
+      }
+    }
+    .z-border-dashed-#{nth($direction, $i)} {
+      border: 0rpx;
+      border-#{nth($direction, $i)}-width: 1rpx !important;
+      border-stze: dashed;
+      border-color: $z-middle-color5;
+      
+      &.z-bold-border {
+        border-#{nth($direction, $i)}-width: 6rpx !important;
+      }
+    }
+  }
+}
+
+/* 边框 end */
+
+/* 文本 start */
+
+.z-text-xs {
+  font-size: 20rpx;
+}
+
+.z-text-sm {
+  font-size: 24rpx;
+}
+
+.z-text-md {
+  font-size: 28rpx;
+}
+
+.z-text-lg {
+  font-size: 32rpx;
+}
+
+.z-text-xl {
+  font-size: 36rpx;
+}
+
+.z-text-xxl {
+  font-size: 40rpx;
+}
+
+.z-text-xl-xxl {
+  font-size: 80rpx;
+}
+
+.z-text-xxl-xxl {
+  font-size: 120rpx;
+}
+
+.z-text-upper {
+  text-transform: uppercase;
+}
+
+.z-text-cap {
+  text-transform: capitalize;
+}
+
+.z-text-lower {
+  text-transform: lowercase;
+}
+
+.z-text-bold {
+  font-weight: bold;
+}
+
+.z-text-center {
+  text-align: center;
+}
+
+.z-text-left {
+	text-align: left;
+}
+
+.z-text-right {
+	text-align: right;
+}
+
+.z-text-justify {
+	text-align: justify;
+}
+
+.z-text-content {
+  line-height: 1.6;
+}
+
+.z-text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.z-text-ellipsis-2 {
+	display: -webkit-box;
+	overflow: hidden;
+	white-space: normal !important;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.z-text-clip {
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+.z-text-break-word {
+  word-wrap: break-word;
+}
+
+/* 文本 end */
+
+/* hover 点击效果 start */
+.z-hover {
+  opacity: 0.6;
+}
+/* hover 点击效果 end */
+
+/* 去除原生button样式 start */
+.z-button-clear {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: inherit;
+  color: inherit;
+}
+/* 去除原生button样式 end */
+
+
+/* iPhoneX底部安全区定义 start */
+.z-safe-area-inset-bottom {
+  padding-bottom: 0;  
+  padding-bottom: constant(safe-area-inset-bottom);  
+  padding-bottom: env(safe-area-inset-bottom);  
+} 
+/* iPhoneX底部安全区定义 end */

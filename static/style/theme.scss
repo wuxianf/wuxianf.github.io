@@ -1,0 +1,24 @@
+/**
+ * @Author      : zouwq
+ * @Date        : 2022-10-09
+ * @Description : 此文件为项目的主题变量，这些变量目前只能通过uni.scss引入才有效，
+ *                由于uni.scss中引入的样式会同时混入到全局样式文件和单独每一个页面的样式中，
+ *                造成微信程序包太大，故uni.scss只建议放scss变量名相关样式，
+ *                其他的样式可以通过main.js或者App.vue引入
+*/
+
+// 主颜色
+$z-main-color: #007aff;
+$z-white-color: #FFFFFF;
+$z-black-color: #000000;
+$z-green-color: #4cd964;
+$z-orange-color: #f0ad4e;
+$z-red-color: #dd524d;
+$z-light-color: #F8F8FA;
+
+// 中性色
+$z-middle-color1: #333333;
+$z-middle-color2: #555555;
+$z-middle-color3: #999999;
+$z-middle-color4: #CCCCCC;
+$z-middle-color5: #E5E6EB;

@@ -1,0 +1,73 @@
+/**
+ * @Author      : zouwq
+ * @Date        : 2022-10-09
+ * @Description : 业务样式
+*/
+
+@import '@/static/style/common.scss';
+
+// 设置整个项目的背景色、字体大小、字体颜色
+page {
+	background-color: $z-light-color;
+	color: $z-middle-color1;
+	font-size: 28rpx;
+}
+
+// 字体颜色
+.text-main-color{
+	color: $z-main-color;
+}
+
+.text-white-color{
+	color: $z-white-color;
+}
+
+.text-black-color{
+	color: $z-black-color;
+}
+
+.text-green-color{
+	color: $z-green-color;
+}
+
+.text-orange-color{
+	color: $z-orange-color;
+}
+
+.text-red-color{
+	color: $z-red-color;
+}
+
+.text-color1{
+	color: $z-middle-color1;
+}
+
+.text-color2{
+	color: $z-middle-color2;
+}
+
+.text-color3{
+	color: $z-middle-color3;
+}
+
+.text-color4{
+	color: $z-middle-color4;
+}
+
+.text-color5{
+	color: $z-middle-color5;
+}
+
+// 卡片
+.z-card{
+	background: $z-white-color;
+	border-radius: 15rpx;
+	padding: 20rpx;
+	box-shadow: 0 0 8rpx 2rpx rgba(0,0,0,0.1);
+}
+
+// 其他
+.white-page{
+	background: $z-white-color;
+	min-height: 100vh;
+}
